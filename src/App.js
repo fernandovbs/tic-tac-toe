@@ -19,7 +19,7 @@ function App() {
   ]
 
   const setMovement = (position, index) => {
-    if (board[index] === '') {
+    if (board[index] === '' && winner === '') {
       let newMovement = board
       newMovement[index] = currentPlayer
       setBoard(newMovement)
@@ -33,10 +33,10 @@ function App() {
 
   const checkResults = (currentPlayer) => {
     let checkedPositions = board.map((player, index) => player === currentPlayer ? index : false)
-    console.log(checkedPositions)
+
     for (const possibleCombination of possibleCombinations) {
       const found = possibleCombination.every(position => checkedPositions.indexOf(position) >= 0)
-      console.log(found)
+
       if (found) {
         return true;
       }
