@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.board {margin:auto;width: 600px;}
+.board a {position: relative;}
+.node {width: 200px; height:200px;display:inline-block;box-sizing: border-box; border:solid black;vertical-align: top;}
+.position-0 {border-width: 0 2px 2px 0;}
+.position-1 {border-width: 0 2px 2px 2px;}
+.position-2 {border-width: 0 0 2px 2px;}
+.position-3 {border-width: 2px 2px 2px 0;}
+.position-4 {border-width: 2px 2px 2px 2px;}
+.position-5 {border-width: 2px 0 2px 2px;}
+.position-6 {border-width: 2px 2px 0 0;}
+.position-7 {border-width: 2px 2px 0 2px;}
+.position-8 {border-width: 2px 0 0 2px;}
