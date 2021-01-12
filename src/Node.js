@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import o from './o.jpeg'
 import x from './x.jpeg'
 

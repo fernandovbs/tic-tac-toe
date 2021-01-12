@@ -19,12 +19,14 @@ function App() {
   ]
 
   const setMovement = (position, index) => {
-    let newMovement = board
-    newMovement[index] = currentPlayer
-    setBoard(newMovement)
-    
-    if (checkResults(currentPlayer)) {
-        currentPlayer === 'xplayer' ? setWinner('X Player') : setWinner('O Player')
+    if (board[index] === '') {
+      let newMovement = board
+      newMovement[index] = currentPlayer
+      setBoard(newMovement)
+      
+      if (checkResults(currentPlayer)) {
+          currentPlayer === 'xplayer' ? setWinner('X Player') : setWinner('O Player')
+      }  
     }
 
     currentPlayer === 'xplayer' ? setCurrentPlayer('oplayer') : setCurrentPlayer('xplayer') 
