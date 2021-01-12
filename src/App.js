@@ -27,9 +27,8 @@ function App() {
       if (checkResults(currentPlayer)) {
           currentPlayer === 'xplayer' ? setWinner('X Player') : setWinner('O Player')
       }  
+      currentPlayer === 'xplayer' ? setCurrentPlayer('oplayer') : setCurrentPlayer('xplayer') 
     }
-
-    currentPlayer === 'xplayer' ? setCurrentPlayer('oplayer') : setCurrentPlayer('xplayer') 
   }
 
   const checkResults = (currentPlayer) => {
