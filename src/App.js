@@ -1,6 +1,7 @@
 import './App.css';
 import Node from './Node'
 import { useState } from 'react'
+import logo from './tic-tac-toe.png'
 
 function App() {
   let [currentPlayer, setCurrentPlayer] = useState('xplayer')
@@ -54,8 +55,8 @@ function App() {
   }
   return (
     <div className="App">
-      <h2>Tic-Tac-Toe</h2>
-      <h4>{winner && `The winner is ${winner}!`}</h4>
+      <img src={logo} width="150" height="150"/>
+      <h2>{winner && `The winner is ${winner}!`}</h2>
       <button onClick={() => {restart()}}>Restart match</button>
       <div className="board">
         {board.map((position, index) => <a href="#" key={index} onClick={() => {setMovement(position, index)}}><Node  position={index} value={board[index]}/></a>)}
